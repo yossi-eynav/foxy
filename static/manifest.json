@@ -1,0 +1,35 @@
+{
+  "manifest_version": 2,
+  "name": "Foxy",
+  "description": "This extension is awesome!",
+  "version": "2.6",
+  "browser_action": {
+    "default_icon": "./icon.png",
+    "default_popup": "index.html?popup"
+  },
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "content_security_policy": "script-src 'self' https://apis.google.com 'unsafe-eval'; object-src 'self'",
+  "permissions": [
+    "tabs",
+    "identity",
+    "https://apis.google.com/js/client.js"
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "oauth2": {
+    "client_id": "903841215034-igcmb693651nas473099upppddqjm61q.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/drive",
+      "https://www.googleapis.com/auth/drive.metadata.readonly",
+      "https://www.googleapis.com/auth/drive.photos.readonly",
+      "https://www.googleapis.com/auth/drive.readonly",
+      "profile",
+      "email"
+    ]
+  }
+}

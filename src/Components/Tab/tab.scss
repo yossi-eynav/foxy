@@ -1,0 +1,27 @@
+body {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.tab {
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  #image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+
+  .hidden {
+    opacity: 0;
+  }
+}
