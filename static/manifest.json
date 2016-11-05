@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "Foxy",
-  "description": "This extension is awesome!",
-  "version": "2.6",
+  "name": "Foxy - a random picture on every new tab from your Drive",
+  "description": "On every new tab, a random picture will be displayed from a chosen Google Drive folder. fork me on github! - https://github.com/yossi-eynav/foxy",
+  "version": "2.7",
   "browser_action": {
     "default_icon": "./icon.png",
     "default_popup": "index.html?popup"
