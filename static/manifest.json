@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "Foxy - a random picture on every new tab from your Drive",
-  "description": "On every new tab, a random picture will be displayed from a chosen Google Drive folder. fork me on github! - https://github.com/yossi-eynav/foxy",
+  "name": "Just Photos",
+  "description": "On every new tab, a random picture will be displayed from a chosen Google Drive folder.",
   "version": "4.0",
   "options_page": "options.html",
   "chrome_url_overrides": {
