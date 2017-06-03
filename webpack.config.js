@@ -1,15 +1,18 @@
-var path = require('path');
-var webpack = require('webpack');
-var CopyWebpackPlugin = require('copy-webpack-plugin');
+const path = require('path');
+const webpack = require('webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   devtool: 'cheap-module-source-map',
-  entry: [
-      './src/router'
-  ],
+  entry:
+      {
+          options: './src/components/options',
+          tab: './src/components/tab',
+      }
+  ,
   output: {
     path: path.join(__dirname, './dist'),
-    filename: 'bundle.js',
+    filename: '[name].js',
     publicPath: '/static/'
   },
   plugins: [
@@ -30,19 +33,16 @@ module.exports = {
 
   module: {
     loaders: [{
-      test: /\.js$/,
-      loaders: ['react-hot', 'babel'],
-      include: path.join(__dirname, 'src')
-    }, 
-    { test: /\.css$/,
-      loader: "style-loader!css-loader" 
-    }]
-  },
-    resolve: {
-        alias: {
-
+        test: /\.js$/,
+        loaders: ['react-hot', 'babel'],
+        include: path.join(__dirname, 'src')
+    },
+        {
+            test: /\.scss$|.css$/,
+            loaders: ["style-loader", "css-loader", "sass-loader"]
         }
-    }
+    ]
+  }
 };
 
 

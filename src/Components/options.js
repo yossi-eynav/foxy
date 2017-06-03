@@ -1,4 +1,4 @@
-import Index from './components/Extension/Extension';
+import Index from './OptionsPage/';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 ReactDOM.render(

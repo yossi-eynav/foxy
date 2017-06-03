@@ -3,12 +3,9 @@
   "name": "Foxy - a random picture on every new tab from your Drive",
   "description": "On every new tab, a random picture will be displayed from a chosen Google Drive folder. fork me on github! - https://github.com/yossi-eynav/foxy",
   "version": "2.7",
-  "browser_action": {
-    "default_icon": "./icon.png",
-    "default_popup": "index.html?popup"
-  },
+  "options_page": "options.html",
   "chrome_url_overrides": {
-    "newtab": "index.html"
+    "newtab": "tab.html"
   },
   "content_security_policy": "script-src 'self' https://apis.google.com 'unsafe-eval'; object-src 'self'",
   "permissions": [
