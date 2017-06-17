@@ -1,4 +1,4 @@
-import Index from './OptionsPage/';
+import Index from './Options/';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 ReactDOM.render(
