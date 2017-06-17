@@ -1,5 +1,6 @@
-import Index from './TabPage/';
+import Index from './Tab/';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
 
 ReactDOM.render(
     <MuiThemeProvider>

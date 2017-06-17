@@ -4,7 +4,7 @@
   "description": "Chrome Extension",
   "scripts": {
     "build": "webpack",
-    "build:watch": "webpack:watch"
+    "build:watch": "webpack --watch"
   },
   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoiBnOR/aCrc3+fEHkGV6jVtTvhDY+uesl0FCUwHuFK2LEBjkVoBpOwUk6QrE4/RE+IIWMKkaS1TBZeeCJ+oqJnfevI5ONhdYLOIhbQhVEAWOYLp/GNBdimCaLUw8AregTwzkUaXSeMM23HaWgY8zARd80EAZSQzj2v9S1qzWgnK2mKt4TYS/xmwah1Wu9mnqCTR1n5HuM3CzEygp0YY6IXfwaaigYHT3pQq26gT9ecJgX5FCkVS6Q3VZbTvahJLJlXSwJ0WVGtoWqXYCNDHtvn2MykTbNt7vQqKIVH/pyYRkpu/Src1djHG9cgl5cqFG2wW0OiTJDmxNWdmPqqBnewIDAQAB",
   "devDependencies": {
@@ -36,6 +36,6 @@
     "random-js": "^1.0.8",
     "react": "0.14.6",
     "react-dom": "0.14.6",
-    "sass-loader": "^6.0.5"
+    "sass-loader": "^6.0.6"
   }
 }

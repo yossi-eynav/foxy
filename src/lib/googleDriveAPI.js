@@ -3,7 +3,7 @@ export default class GoogleDriveAPI {
     static getFolderFiles(folderID, accessToken) {
         if(!folderID) { throw 'folder ID is not exists'}
 
-        return fetch(`https://www.googleapis.com/drive/v2/files/${folderID}/children?access_token=${accessToken}`)
+        return fetch(`https://www.googleapis.com/drive/v2/files/${folderID}/children?access_token=${accessToken}&maxResults=1000`)
             .then(response => response.json())
             .then(json => json.items)
     }

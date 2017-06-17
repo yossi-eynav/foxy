@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import {List, ListItem} from 'material-ui/List';
 import Subheader from 'material-ui/Subheader';
+import Snackbar from 'material-ui/Snackbar';
 import Avatar from 'material-ui/Avatar';
 import FileFolder from 'material-ui/svg-icons/file/folder';
 import TextField from 'material-ui/TextField';
@@ -10,11 +11,15 @@ import GoogleDriveAPI from '../../lib/googleDriveAPI';
 import Autentication from '../../lib/autentication';
 import Setting from '../../lib/settings';
 
-export default class Popup extends Component {
+export default class Options extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {accessToken: null, matchedFolders: []}
+        this.state = {
+            accessToken: null,
+            matchedFolders: [],
+            notification: null
+    }
     }
 
     componentDidMount() {
@@ -61,10 +66,17 @@ export default class Popup extends Component {
                            <ListItem key={folder.id}
                                      leftAvatar={<Avatar icon={<FileFolder/>}/>}
                                      primaryText={folder.name.substring(0,30)}
-                                     onClick={()=> this.setCurrentFolder(folder.id)} />)}
+                                     onClick={()=> {
+                                        this.setCurrentFolder(folder.id)
+                                        this.setState({notification: {message: `The folder ${folder.name} selected!`}})
+                                        setTimeout(() => {this.setState({notification: null})}, 3000)
+                                     }} />)}
                   </List>
               </Card>
-          </div>
+              {this.state.notification &&  <Snackbar open={true}  
+                                                    message={this.state.notification.message}
+                                                    autoHideDuration={3000} />} 
+            </div>
 
       )
   }

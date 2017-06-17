@@ -1,13 +1,24 @@
-const LocalStorageKey = 'just_photos';
+export default (function Settings() {
 
-export default class Settings {
-
-    static set(payload) {
-        localStorage.setItem(LocalStorageKey, JSON.stringify(payload));
+    function set(payload) {
+        return new Promise((resolve,reject)=> {
+            chrome.storage.local.set(payload, () => {
+                resolve();
+            });
+        })
     }
 
-    static get() {
-        const payload = localStorage.getItem(LocalStorageKey);
-        return JSON.parse(payload) || {};
+    function get(...keys) {
+        return new Promise((resolve, reject) => {
+            chrome.storage.local.get(keys, (data) => {
+                resolve(data);
+            });
+        })
     }
-}
+
+    return {
+        set,
+        get,
+    }
+
+}());

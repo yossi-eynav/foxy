@@ -8,6 +8,7 @@ module.exports = {
       {
           options: './src/components/options',
           tab: './src/components/tab',
+          background: './src/background'
       }
   ,
   output: {

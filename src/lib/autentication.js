@@ -1,10 +1,10 @@
 export default class Authentication {
 
-    static authenticate() {
+    static authenticate(interactive = true) {
         return new Promise((resolve, reject) => {
             try {
                 chrome.identity.getAuthToken({
-                    'interactive': true
+                    'interactive': interactive
                 },(token) => {
                     resolve(token);
                 });
