@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Just Photos",
   "description": "On every new tab, a random picture will be displayed from a chosen Google Drive folder.",
-  "version": "4.0",
+  "version": "4.7",
   "options_page": "options.html",
   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoiBnOR/aCrc3+fEHkGV6jVtTvhDY+uesl0FCUwHuFK2LEBjkVoBpOwUk6QrE4/RE+IIWMKkaS1TBZeeCJ+oqJnfevI5ONhdYLOIhbQhVEAWOYLp/GNBdimCaLUw8AregTwzkUaXSeMM23HaWgY8zARd80EAZSQzj2v9S1qzWgnK2mKt4TYS/xmwah1Wu9mnqCTR1n5HuM3CzEygp0YY6IXfwaaigYHT3pQq26gT9ecJgX5FCkVS6Q3VZbTvahJLJlXSwJ0WVGtoWqXYCNDHtvn2MykTbNt7vQqKIVH/pyYRkpu/Src1djHG9cgl5cqFG2wW0OiTJDmxNWdmPqqBnewIDAQAB",
   "chrome_url_overrides": {
