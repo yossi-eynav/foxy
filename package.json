@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "material-design-lite": "1.2.0",
+    "material-ui": "^0.18.5",
     "node-sass": "^4.5.3",
     "random-js": "^1.0.8",
     "react": "0.14.6",
