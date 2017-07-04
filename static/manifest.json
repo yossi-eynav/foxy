@@ -17,6 +17,7 @@
     "identity",
     "unlimitedStorage",
     "storage",
+    "contextMenus", 
     "https://apis.google.com/js/client.js"
   ],
   "icons": {
@@ -27,6 +28,13 @@
   "background": {
     "scripts": ["./background.js"]
   },
+  "content_scripts": [
+      {
+        "matches": ["https://*/*", "http://*/*"],
+        "js": ["content.js"],
+        "run_at": "document_end"
+      }
+  ],
   "oauth2": {
     "client_id": "903841215034-igcmb693651nas473099upppddqjm61q.apps.googleusercontent.com",
     "scopes": [
